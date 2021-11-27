@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js"></script>
+  </head>
+  <body>
+    <div id="App">  
+      <input id="txtSearch" placeholder="Search by name" type="search" oninput="search()">
+      <!--Using oninput in search box so removed button-->
+      <!--<button type="button" onClick="search()" id="btnSearch">Search</button>-->
+      <div class="flex-container">
+      <div id="employee-list" class="employee-list">        
+      </div>   
+      </div>
+      <button type="button" onClick="btnBack()" id="btnBack" style="display: none;">Back</button>
+    </div>
+
+  <script>
+         //initially set page with full employee list
+     var fullEmployeeList = getAllEmployeeData();   
+     document.getElementById("employee-list").innerHTML = fullEmployeeList;    
+  </script>
+  </body>
+</html>
+
